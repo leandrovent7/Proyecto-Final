@@ -1,0 +1,139 @@
+
+* { margin: 0; padding: 0; }
+html,body {
+  width: 100%;
+  height: 100vh;
+}
+body {
+  background-color: #fcf4f2;
+  background-image: url("fondo.png");
+}
+#wrapper {
+  display: grid;
+  grid-template-areas:
+  "miHeader"
+  "intro"
+  "blog"
+  "miFooter";
+  grid-template-rows: 80px 1fr 1fr 60px;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  width: 100%;
+  height:100vh ;
+  
+}
+
+header {
+  grid-area: miHeader;
+  background-color: #0565a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+header nav {
+  margin-right: 100px;
+}
+
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+/* pseudoclases */
+header nav ul li a:hover {
+  color: black;
+}
+
+footer {
+  grid-area: miFooter;
+  background-color: #0565a5;
+  color: #fff;
+  font-size: 12px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#intro {
+  grid-area: intro;
+  background-color: rgb(236, 238, 238);
+  
+}
+
+section#blog {
+  grid-area: blog;
+  display: flex;
+  flex-direction: column;
+}
+
+section#blog h2 {
+  font-size: 24px;
+  text-decoration: underline;
+  color: #021030;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section#blog #tratamientos {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+section#blog article {
+  width: 300px;
+  height: 150px;
+  border: 3px solid rgb(26, 27, 28);
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 3px 3px 2px #24242b;
+  margin: 40px;
+}
+
+section#blog article img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 250px) {
+  header h1 {
+  font-size: 15px;
+  margin-left: 10px;
+}
+}
+
+@media screen and (min-width:250px) {
+  #wrapper {
+    grid-template-areas:
+      "miHeader miHeader"
+      "intro publicidad"
+      "blog publicidad"
+      "miFooter miFooter"
+    ;
+    grid-template-columns: auto 250px;
+  }
+}
+
+  aside {
+    visibility: visible;
+  }
+
+  header h1 {
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+}
