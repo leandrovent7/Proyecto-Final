@@ -1,26 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
-* { margin: 0; padding: 0; }
-html,body {
+html, body {
   width: 100%;
   height: 100vh;
 }
+
 body {
-  background-color: #f8f5f4;
+  background-color: #f4f3f3;
   background-image: url("fondo.png");
 }
+
 #wrapper {
   display: grid;
-  grid-template-areas:
-  "miHeader"
-  "intro"
-  "blog"
-  "miFooter";
+  grid-template-areas: "miHeader" "intro" "blog" "miFooter";
   grid-template-rows: 80px 1fr 1fr 60px;
   grid-row-gap: 10px;
   grid-column-gap: 5px;
   width: 100%;
-  height:100vh ;
-  
+  height: 100vh;
 }
 
 aside {
@@ -36,8 +36,6 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 header h1 {
   color: #fff;
@@ -60,6 +58,7 @@ header nav ul li a {
   font-size: 20px;
   text-decoration: none;
 }
+
 /* pseudoclases */
 header nav ul li a:hover {
   color: black;
@@ -70,7 +69,7 @@ footer {
   background-color: #0565a5;
   color: #fff;
   font-size: 12px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -78,7 +77,6 @@ footer {
 section#intro {
   grid-area: intro;
   background-color: rgb(236, 238, 238);
-  
 }
 
 section#blog {
@@ -119,28 +117,21 @@ section#blog article img {
 
 @media screen and (min-width: 250px) {
   header h1 {
-  font-size: 15px;
-  margin-left: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
 }
-}
-
-@media screen and (min-width:250px) {
+@media screen and (min-width: 250px) {
   #wrapper {
-    grid-template-areas:
-      "miHeader miHeader"
-      "intro publicidad"
-      "blog publicidad"
-      "miFooter miFooter"
-    ;
+    grid-template-areas: "miHeader miHeader" "intro publicidad" "blog publicidad" "miFooter miFooter";
     grid-template-columns: auto 250px;
   }
 }
+aside {
+  visibility: visible;
+}
 
-  aside {
-    visibility: visible;
-  }
-
-  header h1 {
+header h1 {
   color: white;
   font-size: 30px;
   margin-left: 10px;
@@ -149,4 +140,4 @@ section#blog article img {
 .informacion article {
   justify-content: center;
   align-items: center;
-}
+}/*# sourceMappingURL=estilos.css.map */
